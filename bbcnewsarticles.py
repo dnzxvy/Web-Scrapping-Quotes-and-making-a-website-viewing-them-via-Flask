@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import csv
 
-# Send a request to the BBC News page
+#Send a request to the BBC News page
 url = "https://www.bbc.com/news"
 response = requests.get(url)
 
@@ -14,13 +14,13 @@ else:
     print("Failed to retrieve the page")
     exit()
 
-# Parse the HTML using BeautifulSoup
+
 soup = BeautifulSoup(html_content, 'html.parser')
 
-# Extract all article containers
+
 articles = soup.find_all('div', class_='ssrcss-1mhwnz8-Promo')
 
-# Prepare a list to hold all article data
+#Prepare a list to hold all article data
 articles_data = []
 
 # Loop through each article container
